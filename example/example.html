@@ -1,0 +1,21 @@
+<script src="../completer.js"></script>
+<script src="./dict.js"></script>
+
+<input class="complete"><br>
+<input class="foobar"><br>
+<input class="foobar">
+
+<script>
+    var dict1 = new completer(dict)
+    var dict2 = new completer(['test','tes','te','tesla'])
+
+    dict1.bind('complete',function(completions){
+        //put your completion menu/dom manipulations here
+        console.log(completions)
+    })
+
+    dict2.bind('foobar',function(completions){
+        console.log(completions)
+    })
+
+</script>
